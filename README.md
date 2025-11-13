@@ -7,18 +7,11 @@ Funcionalidades:
 - Editar produto
 - Excluir produto
 
-Tecnologias:
-- PHP 8+ (recomendado)
-- MySQL (crie pelo phpMyAdmin)
-- PDO (prepared statements)
-- SweetAlert2 para alertas
-- CSS + animações leves
-
 ## Instalação rápida
-1. Copie a pasta `product-manager` para o diretório público do seu servidor (ex: `htdocs` ou `www`).
-2. Crie um banco de dados MySQL (ex: `product_manager`) e importe `sql/create_db.sql`.
+1. Copie a pasta `produto-mvc-andrey` para o diretório público do seu servidor (ex: `htdocs` ou `www`).
+2. Crie um banco de dados MySQL (ex: `mvc_andrey_produto`) e importe `sql/create_db.sql`.
 3. Abra `config.php` e ajuste `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS`.
-4. Acesse via navegador, ex: `http://localhost/product-manager/index.php`.
+4. Acesse via navegador, ex: `http://localhost/produto-mvc-andrey/index.php`.
 
 ## Observações
 - Arquivos principais:
