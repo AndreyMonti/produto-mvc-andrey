@@ -1,0 +1,65 @@
+/* Minimal clean palette and soft animations */
+:root{
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --muted: #64748b;
+  --primary: #6ee7b7; /* minty */
+  --accent: #60a5fa;
+  --danger: #fb7185;
+  --glass: rgba(255,255,255,0.6);
+  --shadow: 0 6px 18px rgba(22,28,37,0.06);
+  --radius: 14px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+body{background:linear-gradient(180deg,var(--bg),#ffffff);margin:0;color:#0f172a;}
+.container{width:95%;max-width:980px;margin:28px auto;padding:0 12px;}
+
+/* topbar */
+.topbar{backdrop-filter: blur(6px);padding:18px 0;}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;}
+.brand{margin:0;font-weight:600;letter-spacing:-0.5px;color:#0b1220}
+nav a{margin-left:12px;text-decoration:none}
+.btn{background:var(--primary);padding:8px 14px;border-radius:10px;border:none;box-shadow:var(--shadow);cursor:pointer;text-decoration:none;color:#04201a;font-weight:600;transition:transform 160ms ease, box-shadow 160ms ease}
+.btn:hover{transform:translateY(-3px)}
+.btn-link{background:transparent;color:var(--muted);padding:6px 10px;border-radius:8px}
+
+/* card */
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;animation:fadeUp 280ms ease both;}
+.card-header{padding:18px 22px;border-bottom:1px solid #f1f5f9}
+.card-body{padding:18px 22px}
+.card-form{max-width:720px;margin:0 auto}
+
+/* table */
+.table{width:100%;border-collapse:collapse;margin-top:8px}
+.table thead th{text-align:left;padding:12px 8px;font-size:13px;color:var(--muted)}
+.table tbody td{padding:12px 8px;border-top:1px solid #f1f5f9}
+
+/* buttons */
+.btn-sm{padding:6px 10px;border-radius:8px;border:none;background:#eef2ff;color:#0b1220;margin-right:6px;cursor:pointer}
+.btn-sm.danger{background:transparent;color:var(--danger);border:1px solid #fee2e2}
+
+/* form */
+.form label{display:block;margin-bottom:10px;font-size:14px;color:#0b1220}
+.form input[type="text"], .form input[type="number"]{width:100%;padding:12px;border-radius:10px;border:1px solid #e6eef7;background:transparent;outline:none;transition:box-shadow 160ms ease}
+.form input:focus{box-shadow:0 6px 18px rgba(96,165,250,0.12);border-color:var(--accent)}
+
+/* alert */
+.alert{background:#fff7ed;padding:10px;border-radius:8px;margin-bottom:12px;border:1px solid #ffedd5;color:#92400e}
+
+/* muted */
+.muted{color:var(--muted)}
+
+/* footer */
+.footer{padding:18px 0;text-align:center;color:var(--muted);font-size:13px}
+
+/* small helpers */
+.actions{display:flex;align-items:center}
+.form-actions{text-align:right;margin-top:12px}
+
+/* subtle animations */
+@keyframes fadeUp{
+  from{transform:translateY(8px);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
